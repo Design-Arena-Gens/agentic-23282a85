@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 213 65% 99%;
+  --foreground: 217 33% 12%;
+  --muted: 222 43% 96%;
+  --muted-foreground: 217 16% 35%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 217 33% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 217 33% 12%;
+  --border: 213 35% 88%;
+  --input: 213 34% 90%;
+  --primary: 212 89% 55%;
+  --primary-foreground: 214 100% 97%;
+  --secondary: 215 30% 96%;
+  --secondary-foreground: 219 28% 20%;
+  --accent: 198 94% 73%;
+  --accent-foreground: 214 100% 12%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --ring: 211 95% 65%;
+  --radius: 0.75rem;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+a {
+  @apply text-primary underline-offset-4 hover:underline;
+}
+
+[data-reach-dialog-overlay] {
+  @apply bg-black/50 backdrop-blur;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[role="combobox"]:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
